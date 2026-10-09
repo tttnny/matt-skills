@@ -18,7 +18,7 @@ Work the tree in **rounds**. The **frontier** is every decision whose prerequisi
 - `id`：本轮内唯一（重复即整轮拒收），表单按它存用户的作答；
 - `number` / `header`：Q 编号 / 短标题，界面拼成 `Q2 · 标题`；
 - `question`：一句话的提问（纯文本单行，markdown 与换行都不生效），背景进 `detail`；
-- `detail`：只写各选项共用的背景（markdown）——选项在这里再列一遍会被整轮拒收；
+- `detail`：只写各选项共用的背景（markdown），选项在这里再列一遍会被整轮拒收；
 - `options[]`：每个候选一条 `label` + 一句话的 `description`（各自的代价 / 影响，推荐项把推荐理由也写在这），选项**只**写在这里；
 - 推荐项放最前、给 `recommended: true`：它默认勾上、也算那题已作答，只标你真心会选的；
 - 开放题不给 `options`，用户在那个自填框里答；每题都能勾选加自填、勾选可多选（不互斥）。
@@ -34,6 +34,6 @@ Finding _facts_ is your job, never the user's. When a frontier question needs a 
 > **会话结束的判定需要同时满足**：
 >
 > - **The frontier is empty**: every branch of the design tree visited, nothing left silently assumed.
-> - 本会话派遣过的**每一个子代理都已结算**——只要还有一个没回来，`frontier` 空了也不作数，不得当成最终共识、不得向用户确认或据此行动；先等它结算（结果可能推翻已定下来的决定、需要重开一部分树）。
+> - 本会话派遣过的**每一个子代理都已结算**：只要还有一个没回来，`frontier` 空了也不作数，不得当成最终共识、不得向用户确认或据此行动；先等它结算（结果可能推翻已定下来的决定、需要重开一部分树）。
 >
 > Do not act on it until the user confirms you have reached a shared understanding.
