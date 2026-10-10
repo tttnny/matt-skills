@@ -20,7 +20,7 @@ Typing `/grilling` directly gets you the plain interview and nothing else. Where
 
 ## Prerequisites
 
-The round is delivered as a form, which needs the [dsh-grilling-form](https://github.com/tttnny/my-dsh/tree/main/plugins/dsh-grilling-form) plugin installed in your harness. Without it the skill has no shape to ask a round in.
+The round is delivered as a form, which needs the [dsh-grilling-form](https://github.com/tttnny/my-dsh/tree/main/plugins/dsh-grilling-form) plugin installed in your harness. Without it the skill has no shape to ask a round in. The skill leaves the form's mechanics to the tool itself: the field semantics, the wordings the tool rejects, and the shape of the answer block all come from the tool's own description, so the skill body does not have to follow every change to the form.
 
 ## The round, the frontier, and who decides
 
